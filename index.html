@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>MyWeatherApp</title>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <!-- CSS Reset -->
+        <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+        <!-- Milligram CSS minified -->
+        <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+        <link rel="stylesheet" href="./main.css" type="text/css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="container">
+                <h1>My Weather App</h1>
+                <h3>{{location}}</h3>
+                <h3>{{unitTemperature}}<span v-on:click="covertTempUnit">{{tempUnit.substr(0,1)}}</span></h3>
+                <h3>{{weather}}</h3>
+                <img v-bind:src="iconUrl"/>
+            </div>
+        </div>
+    </body>
+    <script src="./main.js"></script>
+</html>
